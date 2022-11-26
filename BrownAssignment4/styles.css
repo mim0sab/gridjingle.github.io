@@ -1,0 +1,172 @@
+p {
+    font-family: Georgia;
+}
+
+h1 {
+    font-size: 1.25em;
+}
+
+#myGrid{
+    display: grid;
+    min-width: 1000px;
+    grid:
+    [header-start]  "header      header      header      header"     1fr
+    [content-start] "img1        jobdscrpt2  img3        jobdscrpt4" 1fr
+    [content-mid1]  "img1        img2        img3        img4"       1fr
+    [content-mid2]  "jobdscrpt1  img2        jobdscrpt3  img4"       1fr
+    [footer-start]  "footer      footer      footer      footer"     1fr /
+    [jobSplits] 1fr 1fr 1fr 1fr;
+    /*grid-template-rows: 100px 100px;
+    grid-template-columns: 100px 100px;*/
+}
+#one{
+    grid-area: header;
+    background-color: maroon;
+    color: white;
+    font-family: 'Brush Script MT';
+    text-align: center;
+}
+#one header {
+    font-size: 5em;
+}
+#one p {
+    font-family: Georgia;
+    font-size: 1.5em;
+}
+
+#job1photo {
+    grid-area: img1;
+    background-image: url(images/headJingler.jpg);
+    background-size: cover;
+    /*background-size: auto;*/
+}
+#job1{
+    grid-area: jobdscrpt1;
+}
+#job2 {
+    grid-area: jobdscrpt2;
+}
+#job2photo {
+    grid-area: img2;
+    background-image: url(images/triangle.jpg);
+    background-size: cover;
+}
+#job3photo {
+    grid-area: img3;
+    background-image: url(images/marimba.jpg);
+    background-size: cover;
+}
+#job3 {
+    grid-area: jobdscrpt3;
+}
+#job4 {
+    grid-area: jobdscrpt4;
+}
+#job4photo {
+    grid-area: img4;
+    background-image: url(images/fingerCymbals.jpg);
+    background-size: cover;
+}
+#last {
+    grid-area: footer;
+    background-color: maroon;
+    color: white;
+    font-family: 'Brush Script MT';
+    font-size: 4em;
+    text-align: center;
+    padding-top: 1em;
+}
+.imgBorder{
+    border: solid 1px black;
+}
+.description {
+    background-color: #fcdbd9;
+    text-align: center;
+    padding: 1em;
+}
+ul {
+    text-align: left;
+    margin-left: 1em;
+}
+
+@media screen and (max-width: 500px){
+    p {
+        font-family: Georgia;
+    }
+    
+    h1 {
+        font-size: 1.25em;
+    }
+    #myGrid{
+        display: grid;
+        grid:
+        [header]     "header"     1fr
+        [img1]       "img1"       1fr
+        [jobdscrpt1] "jobdscrpt1" 1fr
+        [img2]       "img2"       1fr
+        [jobdscrpt2] "jobdscrpt2" 1fr
+        [img3]       "img3"       1fr
+        [jobdscrpt3] "jobdscrpt3" 1fr
+        [img4]       "img4"       1fr
+        [jobdscrpt4] "jobdscrpt4" 1fr
+        [footer]     "footer"     1fr /
+        [col] minmax(0,100%);
+    }
+    #one{
+        grid-area: header;
+        background-color: maroon;
+        color: white;
+        font-family: 'Brush Script MT';
+        text-align: center;
+    }
+    #job1photo {
+        grid-area: img1;
+        background-image: url(images/headJingler.jpg);
+        background-size: cover;
+        /*background-size: auto;*/
+    }
+    #job1{
+        grid-area: jobdscrpt1;
+    }
+    #job2photo {
+        grid-area: img2;
+        background-image: url(images/triangle.jpg);
+        background-size: cover;
+    }
+    #job2 {
+        grid-area: jobdscrpt2;
+    }
+    #job3photo {
+        grid-area: img3;
+        background-image: url(images/marimba.jpg);
+        background-size: cover;
+    }
+    #job3 {
+        grid-area: jobdscrpt3;
+    }
+    #job4photo {
+        grid-area: img4;
+        background-image: url(images/fingerCymbals.jpg);
+        background-size: cover;
+    }
+    #job4 {
+        grid-area: jobdscrpt4;
+    }
+    #last {
+        grid-area: footer;
+        background-color: maroon;
+        color: white;
+        font-family: 'Brush Script MT';
+        font-size: 4em;
+        text-align: center;
+        padding-top: 1em;
+    }
+    .imgBorder{
+        border: solid 1px black;
+    }
+    .description {
+        background-color: #fcdbd9;
+        text-align: center;
+        padding: 1em;
+    }
+}
